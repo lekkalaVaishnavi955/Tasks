@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <title>My Portfolio Homepage</title>
+    <style>
+        body{
+             display:flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             background:linear-gradient(to right ,  #8E2DE2, #4A00E0);
+             color:white;
+             letter-spacing:2px ;
+             font-size: 2.5rem;
+    
+
+             
+        }
+        #shadow-effect{
+            text-shadow: 2px 2px 5px blanchedalmond;
+        }
+        #message{
+            width: 0;
+            text-align: center;
+            display: inline-block;
+            border-right: 2px solid white;
+            animation: typing 2s steps(25,end) forwards ,blink-caret 0.75s step-end infinite,
+            hide-cursor 0.1s 3.5s forwards;
+        
+        }
+
+        @keyframes typing{
+            from {width: 0}
+            to {width: 100%}
+        }
+        
+        @keyframes blink-caret {
+            from,to {border-color: transparent}
+            50%{border-color: white}
+            
+        }
+        @keyframes hide-cursor{
+            to {border-right: none;}
+        }
+        @media (max-width:1000px) {
+            body{
+                font-size: 1.4rem;
+            }
+        }
+     
+    </style>
+</head>
+<body>
+    <h1 id="message"></h1>
+    <script>
+        const text="Welcome to my Portfolio"
+        let ele=document.getElementById("message");
+        ele.textContent=text;
+        ele.classList.add('shadow-text');
+    </script>
+</body>
+</html>

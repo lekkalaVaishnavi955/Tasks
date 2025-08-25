@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left">
+      <div class="location" id="location">Hyderabad, IN</div>
+      <div class="date" id="date">Monday, 25 Aug 2025</div>
+      <div class="weather-icon" id="icon">🌤️</div>
+      <div class="temperature" id="temperature">29°C</div>
+      <div class="condition" id="condition">Sunny</div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button onclick="getWeather()">Search</button>
+      </div>
+      <div class="details">
+        <p>🌧️ Precipitation: <span id="precip">-- mm</span></p>
+        <p>💧 Humidity: <span id="humidity">--%</span></p>
+        <p>🌬️ Wind: <span id="wind">-- km/h</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
